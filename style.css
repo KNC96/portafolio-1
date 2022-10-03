@@ -1,0 +1,246 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1E1E1E;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-between;
+}
+/*aca modifico el header*/
+.navegacion{
+    display: flex;
+    justify-content: flex-end;
+}
+header nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 25px;
+    font-weight:100;
+    color: white;
+}
+nav ul li a:hover{
+    color: #FFDE59;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+/*aca modifico el footer*/
+.pie_de_pagina{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(#FFDE59 , #ddb100);
+    color: black;
+}
+footer .social i{
+    font-size: 25px;
+    margin: 0 3px;
+    cursor: pointer;
+}
+.social i:hover{
+    color: palevioletred;
+}
+/*aca configuro como se ven las letras animadas*/
+.main-one span{
+    font-weight: 600;
+    font-size: 60px;
+    color: #FFDE59;
+}
+/*otros elementos*/
+.main-one p{
+    font-size: 17px;
+    padding: 10px 0;
+}
+.main-one h1{
+    font-size: 80px;
+}
+.main .main-one{
+    width: 45%;
+    padding: 40px 30px;
+    padding-left: 150px;
+    padding-top: 80px;
+}
+/*aca configuro como se ve el boton de "contratame"*/
+.main-one button{
+    background-color: #FFDE59;
+    outline: none;
+    border: none;
+    padding: 9px 35px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    box-shadow: 2px 2px 30px #0e0e0e79;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all ease-out 0.2s;
+}
+.main-one button:hover{
+    transform: scale(1.02);
+}
+/*aca va la seccion enviar un email*/
+.contact{
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.31);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.31);
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+.contact h1{
+    font-size: 50px;
+}
+.contact h1 span{
+    color: #FFDE59;
+}
+.contact .box{
+    flex-direction: column;
+    margin-top: 40px;
+}
+.box div{
+    width: 40%;
+    margin: auto;
+}
+.contact .box input{
+    width: 90%;
+    margin: auto;
+    outline: none;
+    border: none;
+    background-color: #FFDE59;
+    padding: 9px 40px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 16px;
+}
+.box div{
+    position: relative;
+}
+.box div i{
+    position: absolute;
+    font-size: 20px;
+    color: black;
+    top: 16px;
+    left: 38px;
+}
+.contact .box textarea{
+    margin-top: 20px;
+    background-color: transparent;
+    padding: 10px 30px;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 1px solid #FFDE59;
+    outline: none;
+    margin-left: 30px;
+}
+.send{
+    background: linear-gradient(#FFDE59 , #ddb100);
+    font-size: 19px !important;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 30px auto !important;
+}
+/*aca configuro como se veria en un celular*/
+.checkbtn{
+    line-height: 80px;
+    margin-right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+    color: #FFDE59;
+}
+#check{
+    display: none;
+}
+@media (max-width: 600px){
+    .checkbtn{
+        display: block;
+        float: left;
+    }
+    header{
+        z-index: 1;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #1e1e1e;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+    }
+    nav ul li a{
+        font-size: 30px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .main .main-one{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 20px 40px;
+    }
+    .main-one h1{
+        font-size: 30px;
+    }
+    .main-one span{
+        font-weight: 600;
+        font-size: 30px;
+        color: #FFDE59;
+    }
+    .main-one p{
+        width: 100%;
+        font-size: 20px;
+        margin-top: 40px;
+        padding: 0px;
+    }
+    .main-one button{
+        background-color: #FFDE59;
+        outline: none;
+        border: none;
+        padding: 0px;
+        margin-top: 20px;
+        cursor: pointer;
+        font-size: 20px;
+        height: 50px;
+        width: 180px;
+        box-shadow: 2px 2px 30px #0e0e0e79;
+        font-weight: 600;
+        transition: all ease-out 0.2s;
+    }
+    .contact h1{
+        font-size: 30px;
+    }
+    .box div i{
+        position: absolute;
+        font-size: 20px;
+        color: black;
+        top: 17px;
+        left: 20px;
+    }
+    .contact .box textarea{
+        width: 80%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+}
+
+

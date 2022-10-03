@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--con esto añado los iconos de redes sociales-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+    <!--aqui añado la hoja de estilos-->
+    <link rel="stylesheet" href="style.css">
+    <!--aqui añado el icono de menu-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+     <header class="menu">
+        <nav class="navegacion">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+             <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul>
+              <li><a href="#about">Sobre Mí</a></li>
+              <li><a href="#contact">Servicios</a></li>
+              <li><a href="#project">Portafolio</a></li>
+              <li><a href="#contact">Contactame</a></li>
+            </ul>
+        </nav>
+     </header>
+     <div class="main flex">
+      <div class="main-one">
+        <h1>¿Estas buscando </h1>
+        <div>
+          <span class="auto"></span>
+        </div>
+        <p>
+          Puedo crear sitios web personalizables, adaptables a distintos dispositivos
+          como celulares y tablets.
+          Utilizo distintos frameworks como react, react native, ionic, django, y
+          me especializo en lenguajes de programacion como Javascript y Python.
+        </p>
+        <button>Contratame</button>
+      </div>
+     </div>
+     <!--aqui va la seccion para enviar un email-->
+     <section class="contact" id="contact">
+      <h1>Enviame un <span>Email!</span></h1>
+      <div class="box flex">
+        <div class="datos">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" placeholder="Nombre.." />
+        </div>
+        <div class="datos">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" placeholder="Email.." />
+        </div>
+        <textarea
+          name=""
+          id=""
+          cols="60"
+          rows="5"
+          placeholder="Ingresa tu mensaje aqui...."
+        ></textarea>
+        <div>
+          <input type="submit" class="send" value="Enviar" />
+        </div>
+      </div>
+     </section>
+     <footer class="pie_de_pagina" id="footer">
+      <div class="copy">@copywrite 2022 KNC</div>
+      <div class="social">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-solid fa-phone"></i>
+      </div>
+     </footer>
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <script>
+        var typed = new Typed(".auto", {
+          strings: ["Transcriptor?", "Web Developer?", "Diseñador UI/UX?"],
+          typeSpeed: 60,
+          backSpeed: 70,
+          loop: true,
+        });
+      </script>
+</body>
+</html>
