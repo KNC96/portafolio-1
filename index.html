@@ -19,22 +19,23 @@
 <body>
      <header class="menu">
         <nav class="navegacion">
-            <input type="checkbox" id="check">
+           <div class="vacio"><h2>KNC</h2></div>
+           <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
              <i class="fa-solid fa-bars"></i>
             </label>
             <ul>
               <li><a href="#about">Sobre Mí</a></li>
               <li><a href="#contact">Servicios</a></li>
-              <li><a href="#project">Portafolio</a></li>
+              <li><a href="#project">Mis habilidades</a></li>
               <li><a href="#contact">Contactame</a></li>
             </ul>
         </nav>
      </header>
-     <div class="main flex">
+     <div class="main flex" id="arriba">
       <div class="main-one">
         <h1>¿Estas buscando </h1>
-        <div>
+        <div class="letras-animadas">
           <span class="auto"></span>
         </div>
         <p>
@@ -43,9 +44,47 @@
           Utilizo distintos frameworks como react, react native, ionic, django, y
           me especializo en lenguajes de programacion como Javascript y Python.
         </p>
-        <button>Contratame</button>
+        <button><a href="#contact">Contratame</a></button>
       </div>
      </div>
+     <!--aqui va la seccion de proyectos-->
+     <section class="projects" id="project">
+      <div class="proyecto">
+        <h1>Mis <br /><span>Habilidades</span></h1>
+      <p>
+        Lorem ipsum dolor sicing elit. Molestias officiis veniam reprehenderit
+        minima praesentium provident eos aperiam excepturi doloribus impedit.
+      </p>
+      <button class="button" id="descargar-cv">Download CV</button>
+      </div>
+      <div class="projects-div flex div-1">
+        <h3>Se utilizar la API de Binance</h3>
+        <p>
+          Al presionar el boton "ver precio" 
+          se mostrara el precio en tiempo real de la criptomoneda Bitcoin.
+        </p>
+        <h2 class="texto"><span id="contador"></span></h2>
+        <h2 class="texto"><span id="precio"></span></h2>
+        <button onclick="iniciar_contador();">Ver precio</button>
+      </div>
+      <div class="projects-div flex div-2">
+        <h3>Weather App</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere,
+          debitis.
+        </p>
+        <button>Live Preview</button>
+      </div>
+      <div class="projects-div flex div-3">
+        <h3>Food App</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
+          nulla!
+        </p>
+        <button>Live Preview</button>
+      </div>
+    </section>
+    <br /><br />
      <!--aqui va la seccion para enviar un email-->
      <section class="contact" id="contact">
       <h1>Enviame un <span>Email!</span></h1>
@@ -79,6 +118,7 @@
         <i class="fa-solid fa-phone"></i>
       </div>
      </footer>
+     <script src="datos.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
       <script>
         var typed = new Typed(".auto", {
@@ -88,5 +128,6 @@
           loop: true,
         });
       </script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>

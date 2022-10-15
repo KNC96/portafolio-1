@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'MPonderosa';
+    src: url('./MPonderosa.ttf');
+}
 *{
     padding: 0;
     margin: 0;
@@ -16,6 +20,9 @@ body{
 .navegacion{
     display: flex;
     justify-content: flex-end;
+}
+#arriba{
+    padding-top: 80px;
 }
 header nav ul{
     float: right;
@@ -36,6 +43,22 @@ nav ul li{
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
+}
+@media (max-width: 600px){
+    .vacio{
+        width: 100%;
+        height: 80px;
+        background: #1E1E1E;
+        position: fixed;
+    }
+    .vacio h2{
+        font-size: 50px;
+        position: absolute;
+        top: 10%;
+        left: 40%;
+        font-family: 'MPonderosa', sans-serif;
+        color: #FFDE59;
+    }
 }
 /*aca modifico el footer*/
 .pie_de_pagina{
@@ -58,6 +81,14 @@ footer .social i{
     font-weight: 600;
     font-size: 60px;
     color: #FFDE59;
+}
+.letras-animadas{
+    height: 150px;
+}
+@media (max-width: 600px){
+    .letras-animadas{
+        height: 10px;
+    }
 }
 /*otros elementos*/
 .main-one p{
@@ -89,6 +120,114 @@ footer .social i{
 }
 .main-one button:hover{
     transform: scale(1.02);
+}
+.main-one button a{
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+/*aca va la seccion de proyectos*/
+.projects{
+    width: 100%;
+    padding-top: 20px;
+    display: grid;
+    padding-left: 150px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+.proyecto{
+    width: 45%;
+}
+.projects h1{
+    font-size: 50px;
+    line-height: 49px;
+    font-weight: 800;
+}
+.projects h1 span{
+    color: #FFDE59;
+}
+.projects p{
+    font-size: 17px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+.projects .button{
+    background-color: #FFDE59;
+    padding: 9px 25px;
+    margin-top: 20px;
+    width: 200px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    border-radius: 50px;
+}
+.projects-div{
+    width:300px;
+    height: 360px;
+    z-index: 10;
+    margin: 50px;
+    margin-left: 0;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.2s ease-out;
+}
+#contador{
+    display: none;
+}
+.div-1{
+    margin-top: 0;
+}
+.div-2{
+    bottom: 10px;
+    right: 1000px;
+}
+.div-3{
+    bottom: 10px;
+    right: 600px;
+}
+.projects-div h3{
+    font-size: 23px;
+    padding:5px 30px;
+    padding-top: 20px;
+    color: #FFDE59;
+    font-family: 'Roboto', sans-serif;
+}
+.projects-div p{
+    width: 80%;
+    text-align: left;
+    margin: auto;
+}
+.projects button{
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    margin-left: 30px;
+    border: 1px solid #FFDE59;
+    padding: 7px 25px;
+    font-weight: 500;
+    font-size: 22px;
+    border-radius: 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin-top: 25px;
+    border-radius: 50px;
+}
+.texto{
+    padding: 0px 30px;
+}
+@media (max-width: 600px){
+    .projects{
+        padding: 20px 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    .proyecto{
+        margin-bottom: 20px;
+    }
 }
 /*aca va la seccion enviar un email*/
 .contact{
@@ -168,9 +307,11 @@ footer .social i{
     .checkbtn{
         display: block;
         float: left;
+        position: fixed;
+        z-index: 20;
     }
     header{
-        z-index: 1;
+        z-index: 19;
     }
     ul{
         position: fixed;
